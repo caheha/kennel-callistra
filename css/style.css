@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.written {
+    font-family: 'Gloria Hallelujah';
+}
+
+main {
+    margin-top: 4em;
+}
+
+
+/* Navigation */
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 4em;
+    border-bottom: 2px solid #b9c6af;
+}
+
+
+/* Logo */
+.logo {
+    position: absolute;
+    left: 0.5em;
+    top: 0.25em;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    width: 3em;
+}
+
+
+/* Nav-bar */
+.nav-bar {
+    position: absolute;
+    transform: translateY(-100%);
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 4em 2em 2em;
+    height: calc(100% - 6em);
+}
+
+.nav-bar ul li {
+    padding: 1em;
+}
+
+.nav-bar ul a {
+    color: white;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+
+.nav-active {
+    transform: translateY(0);
+    transition: transform 0.5s ease-out;
+}
+
+#nav-button.nav-active #line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+
+#nav-button.nav-active #line2 {
+    opacity: 0;
+}
+
+#nav-button.nav-active #line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+#nav-button {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#nav-button div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-position: center center ;
+    background-size: cover;
+    height: 275px;
+}
+
+.hero.banner-frontpage {
+    background-image: url(../img/banner_forside.JPG);
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: 300;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    position: relative;
+}
+
+/**/
+.content {
+    height: 30em;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: white;
+    margin: 2em 1em 1em 1em;
+    padding: 0.75em 0.75em 0.5em;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-width: 25%;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.card h3 {
+    text-align: center;
+    /*text-transform: uppercase;*/
+}
+
+.card .sticker {
+    position: absolute;
+    width: 15%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* Welcome text */
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.welcome-text h2 {
+    text-align: center;
+}
+
+.welcome-text div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-text p {
+    margin-top: 0.5em;
+}
+
+.welcome-text button {
+    margin-top: 1em;
+    padding: 0.5em;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 3em;
+}
+
+footer .curve {
+    height: 150px; 
+    overflow: hidden;
+}
+
+footer .footer-content {
+    height: 20em;
+    background-color: #6e7f62;
+}
+
+
+/* Theme background colors */
+.bg-darkgreen { background-image: url(../img/darkgreen_bg.png) }
+.bg-green { background-image: url(../img/green_bg.png) }
+.bg-lightgreen { background-image: url(../img/lightgreen_bg.png) }
+.bg-darkbrown { background-image: url(../img/darkbrown_bg.png) }
+.bg-brown { background-image: url(../img/brown_bg.png) }
+.bg-lightbrown { background-image: url(../img/lightbrown_bg.png) }
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+    /* Wavy section */
+    .wavy {
+        position: relative;
+        /*margin: 86px 0;*/
+    }
+
+    /* Wavy top background (::before) */
+    .wavy.bg-darkgreen::before { background-image: url(../img/darkgreen_top.png) }
+    .wavy.bg-green::before { background-image: url(../img/green_top.png) }
+    .wavy.bg-lightgreen::before { background-image: url(../img/lightgreen_top.png) }
+    .wavy.bg-darkbrown::before { background-image: url(../img/darkbrown_top.png) }
+    .wavy.bg-brown::before { background-image: url(../img/brown_top.png) }
+    .wavy.bg-lightbrown::before { background-image: url(../img/darkbrown_top.png) }
+
+    /* Wavy bottom background (::after) */
+    .wavy.bg-darkgreen::after { background-image: url(../img/darkgreen_bottom.png) }
+    .wavy.bg-green::after { background-image: url(../img/green_bottom.png) }
+    .wavy.bg-lightgreen::after { background-image: url(../img/lightgreen_bottom.png) }
+    .wavy.bg-darkbrown::after { background-image: url(../img/darkbrown_bottom.png) }
+    .wavy.bg-brown::after { background-image: url(../img/brown_bottom.png) }
+    .wavy.bg-lightbrown::after { background-image: url(../img/darkbrown_bottom.png) }
+
+    /* if a box is wavy, add ::before and ::after elements */
+
+    .wavy::before, .wavy::after {
+        content: "";
+        width: 100%;
+        height: 86px;
+        left: 0;
+        position: absolute;
+    }
+
+    .wavy::before { top: -86px }
+    .wavy::after { bottom: -86px }
+
+
+
+
+
+
+
+    /* Navigation */
+    .nav-bar {
+        position: initial;
+        transform: none;
+        width: auto;
+        height: auto;
+    }
+
+    .nav-wrapper {
+        width: 1220px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .logo {
+        position: initial;
+    }
+
+    .nav-bar ul {
+        flex-direction: row;
+        padding: 0;
+        height: auto;
+    }
+
+    .nav-bar ul a:hover {
+        color: lawngreen;
+    }
+
+    #nav-button {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+    section {
+        padding: 1em 0;
+    }
+
+
+    .hero {
+        height: 550px;
+    }
+
+
+
+    section > .section-content {
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 2em 0;
+    }
+
+    /* Frontpage */
+    .card-wrapper {
+        flex-direction: row;
+    }
+
+    .card {
+        max-width: 25%;
+        transform-origin: 50% 0%;
+        transform: rotate(2deg);
+    }
+
+
+
+    .welcome-text {
+        flex-direction: row;
+    }
+
+    .welcome-text h2 {
+        width: 50%;
+    }
+
+    .welcome-text div {
+        width: 50%;
+    }
+}
