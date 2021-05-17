@@ -17,25 +17,23 @@
 </head>
 <body class="bg-lightbrown">
     <header class="bg-darkgreen">
-        <div class="nav-wrapper">
+        <nav class="navigation bg-darkgreen">
             <a class="logo" href=""><img src="img/logo.png" alt="Kennel Callistra logo"></a>
-            <nav id="nav-bar" class="nav-bar bg-darkgreen">
-                <ul>
-                    <li><a href="#">hej</a></li>
-                    <li><a href="#">hej</a></li>
-                    <li><a href="#">hej</a></li>
-                    <li><a href="#">hej</a></li>
-                    <li><a href="#">hej</a></li>
-                    <li><a href="#">hej</a></li>
-                    <li><a href="#">hej</a></li>
-                </ul>
-            </nav>
-            <div id="nav-button">
+            
+            <ul id="nav-bar" class="nav-bar bg-darkgreen">
+                <li><a href="#">Om os</a></li>
+                <li><a href="#">Vores hunde</a></li>
+                <li><a href="#">Kuld</a></li>
+                <li><a href="#">Eurasier</a></li>
+                <li><a href="#">Hvalpekøb</a></li>
+            </ul>
+
+            <div id="nav-button" class="nav-button">
                 <div id="line1"></div>
                 <div id="line2"></div>
                 <div id="line3"></div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <main>
@@ -68,15 +66,16 @@
     </section>
 
 
-
-    <div style="background-position: center; background-image: url(http://kennelcallistra.dk/wp-content/uploads/2019/02/cropped-49906704_296724614376907_5548048677868284964_n1-e1550004163928.jpg); background-size: cover; height: 30em"></div>
+    <div class="video-wrapper">
+        <video class="video" loop muted src="video/video.mp4"></video>
+    </div>
 
     <section class="bg-green wavy">
         <div class="section-content welcome-text">
-            <h2>Velkommen</h2>
+            <h2>Kennel Callistra</h2>
             <div>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae culpa reprehenderit laudantium iusto cum ab, deleniti, impedit nemo aspernatur necessitatibus optio! Voluptatum vero praesentium et. Perferendis soluta similique aliquid commodi!</p>
-                <button>klik her</button>
+                <button>Læs mere</button>
             </div>
         </div>
     </section>
@@ -84,14 +83,35 @@
         
 </main>
 
-    <footer>
         <div class="curve">
             <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M0,150 C170,30 330,30 500,150 L500,150 L0,150 Z" style="fill: #6e7f62" />
             </svg>
         </div>
+        <footer>
+        <div class="footer-content">
+            <div class="address">
+                <h4>Adresse</h4>
+                <address>
+                    Kennel Callistra<br>
+                    Nørrevej 39B<br>
+                    7200 Grindsted<br>
+                </address>
+            </div>
+            <div class="contact">
+                <h4>Kontakt</h4>
+                <address>
+                    Grethe og Jan Hald Højgaard<br>
+                    E-mail: <a href="mailto:elverfan@gmail.com">elverfan@gmail.com</a><br>
+                    Tlf.: <a href="tel:+50809180">5080 9180</a> / <a href="tel:+42227999">4222 7999</a>
+                </address>
+            </div>
+            <div class="some">
+                <a href="#"><img src="img/fb-icon.png" alt=""></a>
+                <a href="#"><img src="img/ig-icon.png" alt=""></a>
+            </div>
 
-        <div class="footer-content"></div>
+        </div>
     </footer>
 </body>
 </html>

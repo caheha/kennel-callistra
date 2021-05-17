@@ -34,9 +34,7 @@ header {
 
 /* Logo */
 .logo {
-    position: absolute;
-    left: 0.5em;
-    top: 0.25em;
+    margin: 0.5em 1em;
 }
 
 .logo img {
@@ -47,29 +45,30 @@ header {
 
 
 /* Nav-bar */
+.navigation{
+    position: relative;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
 .nav-bar {
     position: absolute;
     transform: translateY(-100%);
-    width: 100%;
-    height: 100vh;
-    background-color: red;
-}
-
-.nav-bar ul {
     list-style: none;
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
     align-items: center;
-    padding: 4em 2em 2em;
-    height: calc(100% - 6em);
+    height: 100vh;
+    width: 100vw;
 }
 
-.nav-bar ul li {
+.nav-bar li {
     padding: 1em;
 }
 
-.nav-bar ul a {
+.nav-bar li a {
     color: white;
     font-size: 1.25em;
     text-decoration: none;
@@ -80,27 +79,24 @@ header {
     transition: transform 0.5s ease-out;
 }
 
-#nav-button.nav-active #line1 {
+.nav-button.btn-active #line1 {
     transform: rotate(-45deg) translate(-5px,6px);
 }
 
 
-#nav-button.nav-active #line2 {
+.nav-button.btn-active #line2 {
     opacity: 0;
 }
 
-#nav-button.nav-active #line3 {
+.nav-button.btn-active #line3 {
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
-#nav-button {
-    position: absolute;
-    right: 1em;
-    top: 50%;
-    transform: translateY(-50%);
+.nav-button {
+    margin: 1em;
 }
 
-#nav-button div {
+.nav-button div {
     width: 25px;
     height: 3px;
     background-color: white;
@@ -186,6 +182,19 @@ header {
 }
 
 
+.video-wrapper {
+    max-height: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.video {
+    width: 100%;
+    display: block;
+}
+
+
 
 /* Welcome text */
 
@@ -193,6 +202,7 @@ header {
     display: flex;
     flex-direction: column;
     padding: 1em;
+    color: white;
 }
 
 .welcome-text h2 {
@@ -212,12 +222,16 @@ header {
 .welcome-text button {
     margin-top: 1em;
     padding: 0.5em;
+    background-color: #c6b6aa;
+    outline: none;
+    border: none;
+    border-radius: 5px;
 }
 
 
 /* Footer */
 footer {
-    margin-top: 3em;
+    background-color: #6e7f62;
 }
 
 footer .curve {
@@ -225,9 +239,41 @@ footer .curve {
     overflow: hidden;
 }
 
-footer .footer-content {
-    height: 20em;
-    background-color: #6e7f62;
+.footer-content {
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #c6b6aa;
+}
+
+.footer-content a {
+    color: #cec6c0;
+}
+
+.footer-content div {
+    width: calc(100% - 2em);
+    margin-bottom: 1em;
+}
+
+.footer-content h4 {
+    color: #cec6c0;
+    font-size: 1.4em;
+    margin-bottom: 0.25em;
+}
+
+.footer-content address {
+    font-size: 1.15em;
+}
+
+.some {
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+}
+
+.some img {
+    width: 50px;
 }
 
 
@@ -243,7 +289,7 @@ footer .footer-content {
 
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
     /* Wavy section */
     .wavy {
         position: relative;
@@ -286,37 +332,28 @@ footer .footer-content {
 
 
     /* Navigation */
+    .navigation {
+        max-width: 1220px;
+        margin: 0 auto;
+    }
+
     .nav-bar {
         position: initial;
         transform: none;
         width: auto;
         height: auto;
-    }
-
-    .nav-wrapper {
-        width: 1220px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
+        flex-direction: row;
     }
 
     .logo {
-        position: initial;
+        margin: 0.5em 1em;
     }
 
-    .nav-bar ul {
-        flex-direction: row;
-        padding: 0;
-        height: auto;
-    }
-
-    .nav-bar ul a:hover {
+    .nav-bar li a:hover {
         color: lawngreen;
     }
 
-    #nav-button {
+    .nav-button {
         display: none;
     }
 
@@ -365,7 +402,34 @@ footer .footer-content {
         width: 50%;
     }
 
+
+
     .welcome-text div {
         width: 50%;
+    }
+
+    .welcome-text p {
+        padding: 1em;
+    }
+
+
+
+    /* footer */
+    .footer-content {
+        max-width: 1220px;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .footer-content div {
+        width: calc(100% / 3);
+        margin-bottom: 0;
+    }
+    
+
+    .some {
+        margin: 0;
+        align-items: center;
     }
 }
