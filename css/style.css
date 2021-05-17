@@ -1,8 +1,14 @@
+/* -----------------------------------------------
+                      Reset
+----------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* -----------------------------------------------
+                      Theme
+----------------------------------------------- */
 body {
     font-family: 'Muli', sans-serif;
 }
@@ -15,13 +21,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Gloria Hallelujah';
 }
 
-main {
-    margin-top: 4em;
-}
+/* Theme background colors */
+.bg-darkgreen { background-image: url(../img/darkgreen_bg.png) }
+.bg-green { background-image: url(../img/green_bg.png) }
+.bg-lightgreen { background-image: url(../img/lightgreen_bg.png) }
+.bg-darkbrown { background-image: url(../img/darkbrown_bg.png) }
+.bg-brown { background-image: url(../img/brown_bg.png) }
+.bg-lightbrown { background-image: url(../img/lightbrown_bg.png) }
 
+/* -----------------------------------------------
+                Header / Navigation
+----------------------------------------------- */
 
-/* Navigation */
-
+/* Fixed header */
 header {
     position: fixed;
     top: 0;
@@ -31,27 +43,25 @@ header {
     border-bottom: 2px solid #b9c6af;
 }
 
-
-/* Logo */
+/* Logo placement */
 .logo {
     margin: 0.5em 1em;
 }
 
 .logo img {
     display: block;
-    width: 100%;
     width: 3em;
 }
 
 
-/* Nav-bar */
+/* Navigation */
 .navigation{
     position: relative;
     display: flex;
-    height: 100%;
     justify-content: space-between;
 }
 
+/* Mobile nav-bar out of screen */
 .nav-bar {
     position: absolute;
     transform: translateY(-100%);
@@ -74,24 +84,14 @@ header {
     text-decoration: none;
 }
 
+/* Move nav-bar down when active */
 .nav-active {
     transform: translateY(0);
     transition: transform 0.5s ease-out;
 }
 
-.nav-button.btn-active #line1 {
-    transform: rotate(-45deg) translate(-5px,6px);
-}
 
-
-.nav-button.btn-active #line2 {
-    opacity: 0;
-}
-
-.nav-button.btn-active #line3 {
-    transform: rotate(45deg) translate(-5px,-6px);
-}
-
+/* Burger button */
 .nav-button {
     margin: 1em;
 }
@@ -104,6 +104,10 @@ header {
     transition: all 0.3s ease;
 }
 
+/* Animate burger-button on-click */
+.nav-button.btn-active #line1 { transform: rotate(-45deg) translate(-5px,6px) }
+.nav-button.btn-active #line2 { opacity: 0 }
+.nav-button.btn-active #line3 { transform: rotate(45deg) translate(-5px,-6px) }
 
 
 
@@ -111,14 +115,16 @@ header {
 
 
 
+/* -----------------------------------------------
+                 Hero image / Banner
+----------------------------------------------- */
 
+/* Push content below header */
+main {
+    margin-top: 4em;
+}
 
-
-
-
-
-
-
+/* Banner + text */
 .hero {
     display: flex;
     align-items: center;
@@ -130,10 +136,6 @@ header {
     height: 275px;
 }
 
-.hero.banner-frontpage {
-    background-image: url(../img/banner_forside.JPG);
-}
-
 .hero h1 {
     font-size: 3em;
     font-weight: 300;
@@ -142,17 +144,29 @@ header {
     position: relative;
 }
 
-/**/
-.content {
-    height: 30em;
-}
+/* Banner images */
+.hero.banner-frontpage { background-image: url(../img/banner_forside.JPG) }
 
+
+
+
+
+
+
+
+
+/* -----------------------------------------------
+              Polaroid links frontpage
+----------------------------------------------- */
+
+/* Container */
 .card-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+/* Polaroid */
 .card {
     background-color: white;
     margin: 2em 1em 1em 1em;
@@ -173,6 +187,7 @@ header {
     /*text-transform: uppercase;*/
 }
 
+/* Sticker */
 .card .sticker {
     position: absolute;
     width: 15%;
@@ -182,6 +197,12 @@ header {
 }
 
 
+
+/* -----------------------------------------------
+                    Frontpage video
+----------------------------------------------- */
+
+/* Video wrapper */
 .video-wrapper {
     max-height: 550px;
     overflow: hidden;
@@ -189,15 +210,15 @@ header {
     align-items: center;
 }
 
+/* Video */
 .video {
     width: 100%;
     display: block;
 }
 
-
-
-/* Welcome text */
-
+/* -----------------------------------------------
+                Intro text below video
+----------------------------------------------- */
 .welcome-text {
     display: flex;
     flex-direction: column;
@@ -228,17 +249,25 @@ header {
     border-radius: 5px;
 }
 
+.welcome-text button:hover {
+    cursor: pointer;
+    background-color: #e0dcd9;
+}
 
-/* Footer */
+/* -----------------------------------------------
+                      Footer
+----------------------------------------------- */
 footer {
-    background-color: #6e7f62;
+    margin-top: 3em;
 }
 
-footer .curve {
-    height: 150px; 
-    overflow: hidden;
+/* Footer curve */
+.curve img {
+    display: block;
+    width: 100%;
 }
 
+/* Footer content */
 .footer-content {
     padding: 2em 1em;
     display: flex;
@@ -247,10 +276,12 @@ footer .curve {
     color: #c6b6aa;
 }
 
+/* Link color */
 .footer-content a {
     color: #cec6c0;
 }
 
+/* Footer content elements */
 .footer-content div {
     width: calc(100% - 2em);
     margin-bottom: 1em;
@@ -258,39 +289,47 @@ footer .curve {
 
 .footer-content h4 {
     color: #cec6c0;
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-bottom: 0.25em;
 }
 
 .footer-content address {
-    font-size: 1.15em;
+    font-size: 1.10em;
+    line-height: 1.15em;
 }
 
+/* Footer element order */
+.address {
+    order: 1;
+}
+
+.contact {
+    order: 2;
+}
+
+/* Centered SoMe links */
 .some {
     display: flex;
-    margin-top: 2em;
     justify-content: center;
+    order: 0;
 }
 
+.some a {
+    margin: 1em;
+}
+
+/* Icon size */
 .some img {
     width: 50px;
 }
 
 
-/* Theme background colors */
-.bg-darkgreen { background-image: url(../img/darkgreen_bg.png) }
-.bg-green { background-image: url(../img/green_bg.png) }
-.bg-lightgreen { background-image: url(../img/lightgreen_bg.png) }
-.bg-darkbrown { background-image: url(../img/darkbrown_bg.png) }
-.bg-brown { background-image: url(../img/brown_bg.png) }
-.bg-lightbrown { background-image: url(../img/lightbrown_bg.png) }
 
-
-
-
-
+/* -----------------------------------------------
+                    Tablet (768px)
+----------------------------------------------- */
 @media screen and (min-width: 768px) {
-    /* Wavy section */
+    /* Wave elements */
     .wavy {
         position: relative;
         /*margin: 86px 0;*/
@@ -313,7 +352,6 @@ footer .curve {
     .wavy.bg-lightbrown::after { background-image: url(../img/darkbrown_bottom.png) }
 
     /* if a box is wavy, add ::before and ::after elements */
-
     .wavy::before, .wavy::after {
         content: "";
         width: 100%;
@@ -322,6 +360,7 @@ footer .curve {
         position: absolute;
     }
 
+    /* Position wave */
     .wavy::before { top: -86px }
     .wavy::after { bottom: -86px }
 
@@ -331,61 +370,59 @@ footer .curve {
 
 
 
-    /* Navigation */
+    /* Remove burger navigation*/
     .navigation {
         max-width: 1220px;
         margin: 0 auto;
-    }
-
-    .nav-bar {
-        position: initial;
-        transform: none;
-        width: auto;
-        height: auto;
-        flex-direction: row;
     }
 
     .logo {
         margin: 0.5em 1em;
     }
 
-    .nav-bar li a:hover {
-        color: lawngreen;
+    .nav-bar {
+        position: initial;
+        transform: none;
+        flex-direction: row;
+        width: auto;
+        height: auto;
     }
 
     .nav-button {
         display: none;
     }
 
-
-
-
-
-
-
-
-    section {
-        padding: 1em 0;
+    /* Add hover effect on nav-links */
+    .nav-bar li a:hover {
+        color: #e0dcd9;
     }
 
 
+
+
+    /* Set height for banner */
     .hero {
         height: 550px;
     }
 
+    /* Add padding to sections */
+    section {
+        padding: 1em 0;
+    }
 
-
+    /* Center content at max-width */
     section > .section-content {
         max-width: 1220px;
         margin: 0 auto;
         padding: 2em 0;
     }
 
-    /* Frontpage */
+    /* Display polaroids on frontpage in a row */
     .card-wrapper {
         flex-direction: row;
     }
 
+    /* Limit card size and add rotation */
     .card {
         max-width: 25%;
         transform-origin: 50% 0%;
@@ -393,7 +430,7 @@ footer .curve {
     }
 
 
-
+    /* Intro text positioning */
     .welcome-text {
         flex-direction: row;
     }
@@ -401,8 +438,6 @@ footer .curve {
     .welcome-text h2 {
         width: 50%;
     }
-
-
 
     .welcome-text div {
         width: 50%;
@@ -414,7 +449,11 @@ footer .curve {
 
 
 
-    /* footer */
+    /* Footer content positioning */
+    footer {
+        margin-top: 8em;
+    }
+
     .footer-content {
         max-width: 1220px;
         margin: 0 auto;
@@ -426,10 +465,9 @@ footer .curve {
         width: calc(100% / 3);
         margin-bottom: 0;
     }
-    
 
     .some {
-        margin: 0;
+        order: 3;
         align-items: center;
     }
 }
