@@ -1,33 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kennel Callistra</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- JavaScript -->
     <script src="js/script.js" defer></script>
 
-
-    <link rel="stylesheet" href="https://use.typekit.net/yyo0oda.css"><!-- font-family: 'Muli' -->
+    <!-- Fonts: Muli, Alegreya Sans SC & Gloria Hallelujah -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> <!-- font-family: 'Alegreya Sans SC' -->
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet"><!-- font-family: 'Gloria Hallelujah', cursive; -->
+    <link rel="stylesheet" href="https://use.typekit.net/yyo0oda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> 
 </head>
 <body class="bg-lightbrown">
+    <!-- Header navigation -->
     <header class="bg-darkgreen">
         <nav class="navigation bg-darkgreen">
+            <!-- Logo -->
             <a class="logo" href=""><img src="img/logo.png" alt="Kennel Callistra logo"></a>
             
+            <!-- Navigation links -->
             <ul id="nav-bar" class="nav-bar bg-darkgreen">
                 <li><a href="#">Om os</a></li>
                 <li><a href="#">Vores hunde</a></li>
-                <li><a href="#">Kuld</a></li>
-                <li><a href="#">Eurasier</a></li>
+                <li><a href="#">Vores kuld</a></li>
+                <li><a href="#">Eurasieren</a></li>
                 <li><a href="#">Hvalpekøb</a></li>
             </ul>
 
+            <!-- Burger button -->
             <div id="nav-button" class="nav-button">
                 <div id="line1"></div>
                 <div id="line2"></div>
@@ -36,59 +43,74 @@
         </nav>
     </header>
 
+    <!-- Main content -->
     <main>
+        <!-- Hero image -->
+        <div class="hero banner-frontpage">
+            <h1>Kennel Callistra</h1>
+        </div>
 
-    <div class="hero banner-frontpage">
-        <h1>Kennel Callistra</h1>
-    </div>
-
-
-    <section class="bg-lightgreen wavy">
-        <div class="section-content">
-            <div class="card-wrapper">
-                <div class="card">
-                    <img class="sticker" src="img/sticker.png" alt="pote klistermærke">
-                    <img src="img/koeb_hvalp.jpg" alt="">
-                    <h3 class="written">Køb hvalp hos os</h3>
-                </div>
-                <div class="card">
-                    <img class="sticker" src="img/sticker.png" alt="pote klistermærke">
-                    <img src="img/om_racen.JPG" alt="">
-                    <h3 class="written">Om eurasieren</h3>
-                </div>
-                <div class="card">
-                    <img class="sticker" src="img/sticker.png" alt="pote klistermærke">
-                    <img src="img/vores_kuld.jpg" alt="">
-                    <h3 class="written">Vores tidligere kuld</h3>
+        <!-- Polaroid image links -->
+        <section class="bg-lightgreen wavy">
+            <div class="section-content">
+                <div class="card-wrapper">
+                    <a class="card">
+                        <img class="sticker" src="img/sticker.png" alt="pote klistermærke">
+                        <img src="img/koeb_hvalp.jpg" alt="">
+                        <h3 class="written">Køb hvalp hos os</h3>
+                    </a>
+                    <a class="card">
+                        <img class="sticker" src="img/sticker.png" alt="pote klistermærke">
+                        <img src="img/om_racen.JPG" alt="">
+                        <h3 class="written">Om eurasieren</h3>
+                    </a>
+                    <a class="card">
+                        <img class="sticker" src="img/sticker.png" alt="pote klistermærke">
+                        <img src="img/vores_kuld.jpg" alt="">
+                        <h3 class="written">Vores tidligere kuld</h3>
+                    </a>
                 </div>
             </div>
+        </section>
+
+        <!-- Video -->
+        <div class="video-wrapper">
+            <video class="video" loop muted src="video/video.mp4"></video>
         </div>
-    </section>
 
+        <!-- Intro text -->
+        <section class="bg-green wavy">
+            <div class="section-content welcome-text">
+                <h2>Velkommen til vores stueopdræt, Kennel Callistra</h2>
+                <div>
+                    <p>
+                        Her hos Kennel Callistra er vores mål at opdrætte kvalitetshunde, 
+                        som er sunde og raske på alle måder. Avlsarbejdet betyder meget 
+                        for os, vi elsker arbejdet bag planlægningen af et nyt kuld og 
+                        at finde den helt rigtige hanhund til vores kuld. <br><br>
+                        Vores kuld vokser op med vores 3 hunde og kat, samtidig bliver 
+                        de socialiseret med mange forskellige mennesker, hvilket gør at 
+                        hver enkelt hvalp får en god start på livet og er klar til at 
+                        komme ud i den virkelige verden. 
 
-    <div class="video-wrapper">
-        <video class="video" loop muted src="video/video.mp4"></video>
-    </div>
-
-    <section class="bg-green wavy">
-        <div class="section-content welcome-text">
-            <h2>Kennel Callistra</h2>
-            <div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae culpa reprehenderit laudantium iusto cum ab, deleniti, impedit nemo aspernatur necessitatibus optio! Voluptatum vero praesentium et. Perferendis soluta similique aliquid commodi!</p>
-                <button>Læs mere</button>
+                    </p>
+                    <button>Læs mere</button>
+                </div>
             </div>
-        </div>
-    </section>
-
+        </section>        
+    </main>
         
-</main>
-        
+    <!-- Footer -->
     <footer>
+        <!-- Footer curve -->
         <div class="curve">
             <img src="img/curve.png" alt="footer curve">
         </div>
+
+        <!-- Footer content -->
         <div class="bg-darkgreen">
             <div class="footer-content">
+                <!-- Address -->
                 <div class="address">
                     <h4>Adresse</h4>
                     <address>
@@ -97,6 +119,7 @@
                         7200 Grindsted<br>
                     </address>
                 </div>
+                <!-- Contact -->
                 <div class="contact">
                     <h4>Kontakt</h4>
                     <address>
@@ -105,6 +128,7 @@
                         Tlf.: <a href="tel:+50809180">5080 9180</a> / <a href="tel:+42227999">4222 7999</a>
                     </address>
                 </div>
+                <!-- SoMe icons -->
                 <div class="some">
                     <a href="#"><img src="img/fb-icon.png" alt=""></a>
                     <a href="#"><img src="img/ig-icon.png" alt=""></a>
@@ -112,5 +136,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
