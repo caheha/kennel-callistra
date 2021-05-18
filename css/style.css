@@ -11,14 +11,32 @@
 ----------------------------------------------- */
 body {
     font-family: 'Muli', sans-serif;
+    font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.55em;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+p {
+    font-size: 1.10em;
+    line-height: 1.15em;
+}
+
+button {
+    font-size: 1.10em;
 }
 
 .written {
     font-family: 'Gloria Hallelujah';
+    font-weight: bold;
 }
 
 /* Theme background colors */
@@ -138,7 +156,6 @@ main {
 
 .hero h1 {
     font-size: 3em;
-    font-weight: 300;
     color: white;
     text-shadow: 2px 2px 5px black;
     position: relative;
@@ -146,6 +163,10 @@ main {
 
 /* Banner images */
 .hero.banner-frontpage { background-image: url(../img/banner_forside.JPG) }
+.hero.banner-about { background-image: url(../img/banner_omos.JPG) }
+.hero.banner-kuld { background-image: url(../img/banner_koebhvalp.JPG) }
+.hero.banner-eurasier { background-image: url(../img/banner_omeurasieren.JPG) }
+.hero.banner-buypuppy { background-image: url(../img/banner_koebhvalp.JPG) }
 
 
 
@@ -171,9 +192,11 @@ main {
     background-color: white;
     margin: 2em 1em 1em 1em;
     padding: 0.75em 0.75em 0.5em;
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 3px 3px rgba(0, 0, 0, 0.1);
     position: relative;
     min-width: 25%;
+    transition: all 0.1s ease;
+
 }
 
 .card img {
@@ -226,10 +249,6 @@ main {
     color: white;
 }
 
-.welcome-text h2 {
-    text-align: center;
-}
-
 .welcome-text div {
     display: flex;
     flex-direction: column;
@@ -252,6 +271,80 @@ main {
 .welcome-text button:hover {
     cursor: pointer;
     background-color: #e0dcd9;
+}
+
+
+/* -----------------------------------------------
+               image & text container
+----------------------------------------------- */
+.card-text {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2em;
+}
+
+.card-text .card {
+    order: 1;
+}
+
+.card-text .text-aside {
+    order: 2;
+}
+
+.text-aside {
+    padding: 0 1em;
+}
+
+
+
+
+
+/* -----------------------------------------------
+                    Certificate
+----------------------------------------------- */
+.certificate-wrapper {
+    padding: 1em;
+}
+
+
+
+.certificate-wrapper div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1em 0;
+}
+
+.certificate-wrapper img {
+    width: 35%;
+}
+
+
+/* -----------------------------------------------
+                    Kuld-section
+----------------------------------------------- */
+.kuld-section {
+    padding: 1em;
+}
+
+.kuld-section img {
+    width: 100%;
+}
+
+
+
+/* -----------------------------------------------
+                    Certificate
+----------------------------------------------- */
+.infogrpahic-section {
+    padding: 1em;
+}
+
+.infogrpahic-section img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
 }
 
 /* -----------------------------------------------
@@ -296,6 +389,7 @@ footer {
 .footer-content address {
     font-size: 1.10em;
     line-height: 1.15em;
+    font-style: normal;
 }
 
 /* Footer element order */
@@ -335,6 +429,10 @@ footer {
         /*margin: 86px 0;*/
     }
 
+    .no-wave {
+        padding: 7em 0;
+    }
+
     /* Wavy top background (::before) */
     .wavy.bg-darkgreen::before { background-image: url(../img/darkgreen_top.png) }
     .wavy.bg-green::before { background-image: url(../img/green_top.png) }
@@ -367,7 +465,14 @@ footer {
 
 
 
+    /* Theme */
+    h2 {
+        font-size: 2em;
+    }
 
+    p {
+        line-height: 1.3em;
+    }
 
 
     /* Remove burger navigation*/
@@ -386,6 +491,7 @@ footer {
         flex-direction: row;
         width: auto;
         height: auto;
+        text-transform: uppercase;
     }
 
     .nav-button {
@@ -426,7 +532,21 @@ footer {
     .card {
         max-width: 25%;
         transform-origin: 50% 0%;
+        transform: rotate(1.5deg);
+    }
+
+    .card:nth-child(2) {
+        transform: rotate(-1.5deg);
+    }
+
+    .card:nth-child(3) {
         transform: rotate(2deg);
+    }
+
+    .card-wrapper > .card:hover {
+        cursor: pointer;
+        box-shadow: 4px 4px 3px 3px rgba(0, 0, 0, 0.3);
+        transform: rotate(0deg);
     }
 
 
@@ -437,6 +557,8 @@ footer {
 
     .welcome-text h2 {
         width: 50%;
+        display: flex;
+        align-items: center;
     }
 
     .welcome-text div {
@@ -448,6 +570,57 @@ footer {
     }
 
 
+
+
+    /* Card-text aside */
+    .card-text {
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+    }
+
+    .card-text .card:nth-child(2) {
+        order: 3;
+    }
+
+    /* Certifcate in row */
+    .certificate-wrapper h2 {
+        text-align: center;
+    }
+    
+    .certificate-wrapper div {
+        margin-top: 2em;
+        justify-content: space-between;
+    }
+
+    .certificate-wrapper img {
+        max-width: 15%;
+    }
+
+
+    /* Kuld-section */
+    .kuld-section {
+        display: flex;
+    }
+
+    .kuld-section img {
+        width: 30%;
+    }
+
+    /* Infographic */
+    .infogrpahic-section img {
+        width: 50%;
+    }
+
+
+    /* Top and Bottom section no padding */
+    .top-elm {
+        padding-top: 0;
+    }
+
+    .bottom-elm {
+        padding-bottom: 0;
+    }
 
     /* Footer content positioning */
     footer {
