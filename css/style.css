@@ -25,9 +25,20 @@ h2 {
     margin: 0.5em 0;
 }
 
+h3 {
+    font-size: 1.35em;
+    margin: 0.75em 0 0.25em;
+}
+
 p {
     font-size: 1.10em;
-    line-height: 1.15em;
+    line-height: 1.4em;
+    text-align: justify;
+}
+
+i {
+    font-size: 0.8em;
+    opacity: 0.8;
 }
 
 button {
@@ -37,6 +48,16 @@ button {
 .written {
     font-family: 'Gloria Hallelujah';
     font-weight: bold;
+    font-size: 1.17em;
+}
+
+a.card {
+    color: black;
+    text-decoration: none;
+}
+
+a, button {
+    transition: color 0.25s ease, background-color 0.25s ease;
 }
 
 /* Theme background colors */
@@ -167,6 +188,7 @@ main {
 .hero.banner-kuld { background-image: url(../img/banner_koebhvalp.JPG) }
 .hero.banner-eurasier { background-image: url(../img/banner_omeurasieren.JPG) }
 .hero.banner-buypuppy { background-image: url(../img/banner_koebhvalp.JPG) }
+.hero.banner-ourdogs { background-image: url(../img/banner_voreshunde.JPG) }
 
 
 
@@ -195,7 +217,7 @@ main {
     box-shadow: 4px 4px 3px 3px rgba(0, 0, 0, 0.1);
     position: relative;
     min-width: 25%;
-    transition: all 0.1s ease;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 
 }
 
@@ -227,7 +249,7 @@ main {
 
 /* Video wrapper */
 .video-wrapper {
-    max-height: 550px;
+    max-height: 700px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -259,18 +281,20 @@ main {
     margin-top: 0.5em;
 }
 
-.welcome-text button {
+button {
     margin-top: 1em;
-    padding: 0.5em;
+    padding: 0.75em;
     background-color: #c6b6aa;
     outline: none;
     border: none;
     border-radius: 5px;
+    margin: 2em auto;
+    display: block;
 }
 
-.welcome-text button:hover {
+button:hover {
     cursor: pointer;
-    background-color: #e0dcd9;
+    background-color: #ddcec3;
 }
 
 
@@ -295,7 +319,29 @@ main {
     padding: 0 1em;
 }
 
+.text-aside ul {
+    padding-left: 1em;
+    font-size: 1.10em;
+    line-height: 1.4em;
+    text-align: left;
+    list-style: none;
+}
 
+.text-aside li {
+    margin: 1em;
+    position: relative;
+}
+
+.text-aside li::before{
+    content: '';
+    position: absolute;
+    left: -1.5em;
+    top: 0.05em;
+    height: 1em;
+    width: 1em;
+    background-image: url(../img/paw.png);
+    background-size: cover;
+ }
 
 
 
@@ -316,14 +362,27 @@ main {
     margin: 1em 0;
 }
 
+.certificate-wrapper a {
+    max-width: 33%;
+    margin: 1em;
+}
+
+.certificate-wrapper a:last-child {
+    max-width: 66%;
+}
+
 .certificate-wrapper img {
-    width: 35%;
+    width: 100%;
 }
 
 
 /* -----------------------------------------------
                     Kuld-section
 ----------------------------------------------- */
+.kuld-title {
+    display: none;
+}
+
 .kuld-section {
     padding: 1em;
 }
@@ -335,17 +394,131 @@ main {
 
 
 /* -----------------------------------------------
-                    Certificate
+                    Infographic
 ----------------------------------------------- */
-.infogrpahic-section {
+.infographic-section {
     padding: 1em;
 }
 
-.infogrpahic-section img {
+.infographic-section img {
     display: block;
-    margin: 0 auto;
+    margin: 2em auto;
     width: 100%;
 }
+
+
+/* -----------------------------------------------
+                    Dog icons
+----------------------------------------------- */
+.icon-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon img {
+    width: 30%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    margin: 1em 1em 1em 0;
+    background-color: white;
+}
+
+.icon p {
+    text-align: center;
+    width: 30%;
+}
+
+
+
+
+
+
+/* -----------------------------------------------
+                    Image slider
+----------------------------------------------- */
+.dog-description h3, .img-title {
+    text-align: center;
+}
+
+.img-slider {
+    padding: 1em;
+    position: relative;
+}
+
+.slider-wrapper {
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.img-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.img-container img {
+    display: block;
+    width: calc(98% / 3);
+    margin-right: 1%;
+}
+
+.img-container img:last-child {
+    margin-right: 0;
+}
+
+
+
+
+/* Buttons */
+.img-slider button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    color: grey;
+    animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse
+{
+    from {transform: scale(1);}
+    to { transform: scale(1.8);}
+}
+
+.prev
+{
+    position: absolute;
+    left: 15px;
+    top: calc(50% - 15px);
+}
+
+.next
+{
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 15px);
+}
+
+
+
+
+
+
+
+
+
+
 
 /* -----------------------------------------------
                       Footer
@@ -354,15 +527,22 @@ footer {
     margin-top: 3em;
 }
 
+.footer-wrapper {
+    background-color: #6e7f62;
+}
+
 /* Footer curve */
-.curve img {
-    display: block;
-    width: 100%;
+.curve {
+    background-image: url(../img/curve.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 86px;
+    background-position: center;
 }
 
 /* Footer content */
 .footer-content {
-    padding: 2em 1em;
+    padding: 2em 1em 5em 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -388,7 +568,7 @@ footer {
 
 .footer-content address {
     font-size: 1.10em;
-    line-height: 1.15em;
+    line-height: 1.3em;
     font-style: normal;
 }
 
@@ -406,15 +586,16 @@ footer {
     display: flex;
     justify-content: center;
     order: 0;
+    font-size: 45px;
 }
 
 .some a {
-    margin: 1em;
+    margin: 0 0.5em;
 }
 
 /* Icon size */
 .some img {
-    width: 50px;
+    width: 48px;
 }
 
 
@@ -456,6 +637,13 @@ footer {
         height: 86px;
         left: 0;
         position: absolute;
+        animation: waves 60s infinite linear;
+    }
+
+    /* Wave animation */
+    @keyframes waves {
+        from { background-position-x: 0;}
+        to { background-position-x: 1500px;}
     }
 
     /* Position wave */
@@ -467,11 +655,16 @@ footer {
 
     /* Theme */
     h2 {
-        font-size: 2em;
+        font-size: 2.2em;
+    }
+
+    h3 {
+        font-size: 1.75em;
+        text-align: left;
     }
 
     p {
-        line-height: 1.3em;
+        line-height: 1.5em;
     }
 
 
@@ -559,6 +752,7 @@ footer {
         width: 50%;
         display: flex;
         align-items: center;
+        font-size: 2.2em;
     }
 
     .welcome-text div {
@@ -576,26 +770,51 @@ footer {
     .card-text {
         flex-direction: row;
         text-align: center;
-        align-items: center;
+        align-items: flex-start;
+        padding-bottom: 0;
     }
 
     .card-text .card:nth-child(2) {
         order: 3;
     }
 
+    .right-text {
+        padding-left: 4em;
+    }
+
+    .left-text {
+        padding-right: 4em;
+    }
+
     /* Certifcate in row */
-    .certificate-wrapper h2 {
+    .certificate-wrapper {
         text-align: center;
+        padding: 0 1em;;
     }
     
     .certificate-wrapper div {
-        margin-top: 2em;
-        justify-content: space-between;
+        margin-top: 4em;
+        justify-content: space-around;
     }
 
-    .certificate-wrapper img {
-        max-width: 15%;
+    .certificate-wrapper p {
+        text-align: center;
     }
+
+
+    .certificate-wrapper a {
+        width: 10%;
+    }
+
+    .certificate-wrapper a:first-child {
+        order: -2;
+    }
+
+    .certificate-wrapper a:last-child {
+        order: -1;
+        width: 25%;
+    }
+
 
 
     /* Kuld-section */
@@ -603,13 +822,38 @@ footer {
         display: flex;
     }
 
+    .kuld-section div {
+        padding: 0 2em;
+    }
+
     .kuld-section img {
         width: 30%;
     }
 
     /* Infographic */
-    .infogrpahic-section img {
+    .infographic-section img {
         width: 50%;
+        margin: 1em auto 0;
+    }
+
+    .inline-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 2em 0;
+    }
+
+    .inline-list li {
+        margin: 0.5em;
+        width: 45%;
+    }
+
+
+
+
+    /* Icon sizing */
+    .icon {
+        width: 25%;
     }
 
 
@@ -637,10 +881,23 @@ footer {
     .footer-content div {
         width: calc(100% / 3);
         margin-bottom: 0;
+        text-align: center;
+    }
+
+    .footer-content a:hover {
+        color: white;
     }
 
     .some {
         order: 3;
         align-items: center;
+    }
+
+    .some img {
+        width: 36px;
+    }
+
+    .some a:hover {
+        color: white;
     }
 }

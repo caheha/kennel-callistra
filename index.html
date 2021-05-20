@@ -15,23 +15,23 @@
     <!-- Fonts: Muli, Alegreya Sans SC & Gloria Hallelujah -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.typekit.net/yyo0oda.css">
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,300;1,300&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-lightbrown">
     <!-- Header navigation -->
     <header class="bg-darkgreen">
         <nav class="navigation bg-darkgreen">
             <!-- Logo -->
-            <a class="logo" href=""><img src="img/logo.png" alt="Kennel Callistra logo"></a>
+            <a class="logo" href="/" title="Forside"><img src="img/logo.png" alt="Kennel Callistra logo"></a>
             
             <!-- Navigation links -->
             <ul id="nav-bar" class="nav-bar bg-darkgreen">
-                <li><a href="#">Om os</a></li>
-                <li><a href="#">Vores hunde</a></li>
-                <li><a href="#">Vores kuld</a></li>
-                <li><a href="#">Eurasieren</a></li>
-                <li><a href="#">Hvalpekøb</a></li>
+                <li><a href="om-os" title="Om os">Om os</a></li>
+                <li><a href="hunde" title="Vores hunde">Vores hunde</a></li>
+                <li><a href="kuld" title="Vores kuld">Vores kuld</a></li>
+                <li><a href="eurasieren" title="Eurasieren">Eurasieren</a></li>
+                <li><a href="hvalpekoeb" title="Hvalpekøb">Hvalpekøb</a></li>
             </ul>
 
             <!-- Burger button -->
@@ -54,19 +54,19 @@
         <section class="bg-lightgreen wavy">
             <div class="section-content">
                 <div class="card-wrapper">
-                    <a class="card">
+                    <a class="card" href="hvalpekoeb" title="Køb hvalp hos os">
                         <img class="sticker" src="img/sticker.png" alt="pote klistermærke">
-                        <img src="img/koeb_hvalp.jpg" alt="">
+                        <img src="img/koeb_hvalp.jpg" alt="Hvalp">
                         <h3 class="written">Køb hvalp hos os</h3>
                     </a>
-                    <a class="card">
+                    <a class="card" href="eurasieren" title="Om eurasieren">
                         <img class="sticker" src="img/sticker.png" alt="pote klistermærke">
-                        <img src="img/om_racen.JPG" alt="">
+                        <img src="img/om_racen.JPG" alt="Eurasiere">
                         <h3 class="written">Om eurasieren</h3>
                     </a>
-                    <a class="card">
+                    <a class="card" href="kuld" title="Vores tidligere kuld">
                         <img class="sticker" src="img/sticker.png" alt="pote klistermærke">
-                        <img src="img/vores_kuld.jpg" alt="">
+                        <img src="img/vores_kuld.jpg" alt="Hundehvalpe">
                         <h3 class="written">Vores tidligere kuld</h3>
                     </a>
                 </div>
@@ -81,7 +81,7 @@
         <!-- Intro text -->
         <section class="bg-green wavy">
             <div class="section-content welcome-text">
-                <h2>Velkommen til vores stueopdræt, Kennel Callistra</h2>
+                <h2>Velkommen til vores stueopdræt,<br>Kennel Callistra</h2>
                 <div>
                     <p>
                         Her hos Kennel Callistra er vores mål at opdrætte kvalitetshunde, 
@@ -92,23 +92,20 @@
                         de socialiseret med mange forskellige mennesker, hvilket gør at 
                         hver enkelt hvalp får en god start på livet og er klar til at 
                         komme ud i den virkelige verden. 
-
                     </p>
-                    <button>Læs mere</button>
+                    <button onclick="location.href='om-os'">Læs mere</button>
                 </div>
             </div>
-        </section>        
+        </section>
     </main>
         
     <!-- Footer -->
     <footer>
         <!-- Footer curve -->
-        <div class="curve">
-            <img src="img/curve.png" alt="footer curve">
-        </div>
+        <div class="curve"></div>
 
         <!-- Footer content -->
-        <div class="bg-darkgreen">
+        <div class="footer-wrapper">
             <div class="footer-content">
                 <!-- Address -->
                 <div class="address">
@@ -130,12 +127,11 @@
                 </div>
                 <!-- SoMe icons -->
                 <div class="some">
-                    <a href="#"><img src="img/fb-icon.png" alt=""></a>
-                    <a href="#"><img src="img/ig-icon.png" alt=""></a>
+                    <a href="https://www.facebook.com/Kennel-Callistra-%C3%A5ben-101808131209836" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/callistra_eurasier/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-
 </body>
 </html>

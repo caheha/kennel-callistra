@@ -15,23 +15,23 @@
     <!-- Fonts: Muli, Alegreya Sans SC & Gloria Hallelujah -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://use.typekit.net/yyo0oda.css">
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,300;1,300&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-lightbrown">
     <!-- Header navigation -->
     <header class="bg-darkgreen">
         <nav class="navigation bg-darkgreen">
             <!-- Logo -->
-            <a class="logo" href=""><img src="img/logo.png" alt="Kennel Callistra logo"></a>
+            <a class="logo" href="/" title="Forside"><img src="img/logo.png" alt="Kennel Callistra logo"></a>
             
             <!-- Navigation links -->
             <ul id="nav-bar" class="nav-bar bg-darkgreen">
-                <li><a href="#">Om os</a></li>
-                <li><a href="#">Vores hunde</a></li>
-                <li><a href="#">Vores kuld</a></li>
-                <li><a href="#">Eurasieren</a></li>
-                <li><a href="#">Hvalpekøb</a></li>
+                <li><a href="om-os" title="Om os">Om os</a></li>
+                <li><a href="hunde" title="Vores hunde">Vores hunde</a></li>
+                <li><a href="kuld" title="Vores kuld">Vores kuld</a></li>
+                <li><a href="eurasieren" title="Eurasieren">Eurasieren</a></li>
+                <li><a href="hvalpekoeb" title="Hvalpekøb">Hvalpekøb</a></li>
             </ul>
 
             <!-- Burger button -->
@@ -45,12 +45,12 @@
 
     <!-- Main content -->
     <main>
-        <h1>Tidligere kuld</h1>
+        <h1 class="kuld-title">Tidligere kuld</h1>
         <!-- History -->
         <section class="bg-lightbrown no-wave top-elm">
             <div class="section-content">
                 <div class="kuld-section">
-                    <img src="img/A_Kuld.png" alt="">
+                    <img src="img/A_Kuld.png" alt="A-bogstav">
                     <div>
                         <h2>A-kuldet</h2>
                         <p>
@@ -60,6 +60,7 @@
                             og sluttede først om eftermiddagen kl. 15.09. Nova er et pragteksempel på 
                             en god hundemor, som har sat nogle livlige og målrettet hvalpe i verden.
                         </p>
+                        <button>Læs mere</button>
                     </div>
                 </div>
             </div>
@@ -70,7 +71,7 @@
         <section class="bg-lightgreen wavy">
             <div class="section-content">
                 <div class="kuld-section">
-                    <img src="img/B_Kuld.png" alt="">
+                    <img src="img/B_Kuld.png" alt="B-bogstav">
                     <div>
                         <h2>B-kuldet</h2>
                         <p>
@@ -79,6 +80,7 @@
                             11 glade og sunde hvalpe. Fødslen startede kl. 15.11 og den sidste hvalp kom 
                             til kl. 21.07, endnu en vellykket omgang hvalpe for hundemor Nova. 
                         </p>
+                        <button>Læs mere</button>
                     </div>
                 </div>
             </div>
@@ -88,7 +90,7 @@
          <section class="bg-lightbrown no-wave">
             <div class="section-content">
                 <div class="kuld-section">
-                    <img src="img/C_Kuld.png" alt="">
+                    <img src="img/C_Kuld.png" alt="C-bogstav">
                     <div>
                         <h2>C-kuldet</h2>
                         <p>
@@ -98,6 +100,7 @@
                             hvalpe og her fik Nova igen vist os hvilken god mor hun er, plejende og 
                             tålmodig over for hvalpene. 
                         </p>
+                        <button>Læs mere</button>
                     </div>
                 </div>
             </div>
@@ -107,7 +110,7 @@
         <section class="bg-lightgreen wavy bottom-elm">
             <div class="section-content">
                 <div class="kuld-section">
-                    <img src="img/D_Kuld.png" alt="">
+                    <img src="img/D_Kuld.png" alt="D-bogstav">
                     <div>
                         <h2>D-kuldet</h2>
                         <p>
@@ -124,12 +127,10 @@
     <!-- Footer -->
     <footer>
         <!-- Footer curve -->
-        <div class="curve">
-            <img src="img/curve.png" alt="footer curve">
-        </div>
+        <div class="curve"></div>
 
         <!-- Footer content -->
-        <div class="bg-darkgreen">
+        <div class="footer-wrapper">
             <div class="footer-content">
                 <!-- Address -->
                 <div class="address">
@@ -151,12 +152,11 @@
                 </div>
                 <!-- SoMe icons -->
                 <div class="some">
-                    <a href="#"><img src="img/fb-icon.png" alt=""></a>
-                    <a href="#"><img src="img/ig-icon.png" alt=""></a>
+                    <a href="https://www.facebook.com/Kennel-Callistra-%C3%A5ben-101808131209836" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/callistra_eurasier/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-
 </body>
 </html>
