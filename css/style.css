@@ -41,24 +41,31 @@ i {
     opacity: 0.8;
 }
 
-button {
-    font-size: 1.10em;
-}
-
 .written {
     font-family: 'Gloria Hallelujah';
     font-weight: bold;
     font-size: 1.17em;
 }
 
-a.card {
-    color: black;
-    text-decoration: none;
+/* Button */
+button {
+    padding: 0.75em;
+    background-color: #c6b6aa;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 1.5em auto;
+    display: block;
+    font-size: 1.10em;
 }
 
-a, button {
-    transition: color 0.25s ease, background-color 0.25s ease;
+button:hover {
+    cursor: pointer;
+    background-color: #ddcec3;
 }
+
+a, button { transition: color 0.25s ease, background-color 0.25s ease }
+.centered { text-align: center }
 
 /* Theme background colors */
 .bg-darkgreen { background-image: url(../img/darkgreen_bg.png) }
@@ -71,7 +78,6 @@ a, button {
 /* -----------------------------------------------
                 Header / Navigation
 ----------------------------------------------- */
-
 /* Fixed header */
 header {
     position: fixed;
@@ -85,13 +91,13 @@ header {
 /* Logo placement */
 .logo {
     margin: 0.5em 1em;
+    width: 3em;
 }
 
 .logo img {
     display: block;
-    width: 3em;
+    width: 100%;
 }
-
 
 /* Navigation */
 .navigation{
@@ -113,9 +119,7 @@ header {
     width: 100vw;
 }
 
-.nav-bar li {
-    padding: 1em;
-}
+.nav-bar li { padding: 1em }
 
 .nav-bar li a {
     color: white;
@@ -129,11 +133,8 @@ header {
     transition: transform 0.5s ease-out;
 }
 
-
 /* Burger button */
-.nav-button {
-    margin: 1em;
-}
+.nav-button { margin: 1em }
 
 .nav-button div {
     width: 25px;
@@ -148,29 +149,21 @@ header {
 .nav-button.btn-active #line2 { opacity: 0 }
 .nav-button.btn-active #line3 { transform: rotate(45deg) translate(-5px,-6px) }
 
-
-
-
-
-
-
 /* -----------------------------------------------
                  Hero image / Banner
 ----------------------------------------------- */
 
 /* Push content below header */
-main {
-    margin-top: 4em;
-}
+main { margin-top: 4em }
 
-/* Banner + text */
+/* Banner + title */
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 
-    background-position: center center ;
+    background-position: center center;
     background-size: cover;
     height: 275px;
 }
@@ -190,19 +183,9 @@ main {
 .hero.banner-buypuppy { background-image: url(../img/banner_koebhvalp.JPG) }
 .hero.banner-ourdogs { background-image: url(../img/banner_voreshunde.JPG) }
 
-
-
-
-
-
-
-
-
 /* -----------------------------------------------
               Polaroid links frontpage
 ----------------------------------------------- */
-
-/* Container */
 .card-wrapper {
     display: flex;
     flex-direction: column;
@@ -227,10 +210,7 @@ main {
     margin-bottom: 0.5em;
 }
 
-.card h3 {
-    text-align: center;
-    /*text-transform: uppercase;*/
-}
+.card h3 { text-align: center }
 
 /* Sticker */
 .card .sticker {
@@ -241,12 +221,14 @@ main {
     transform: translate(-50%, -50%);
 }
 
-
+a.card {
+    color: black;
+    text-decoration: none;
+}
 
 /* -----------------------------------------------
                     Frontpage video
 ----------------------------------------------- */
-
 /* Video wrapper */
 .video-wrapper {
     max-height: 700px;
@@ -277,26 +259,9 @@ main {
     align-items: center;
 }
 
-.welcome-text p {
-    margin-top: 0.5em;
-}
-
-button {
-    margin-top: 1em;
-    padding: 0.75em;
-    background-color: #c6b6aa;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    margin: 2em auto;
-    display: block;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: #ddcec3;
-}
-
+.welcome-text p { margin-top: 0.5em }
+.welcome-text a { color: #ddcec3 }
+.welcome-text a:hover { color: white }
 
 /* -----------------------------------------------
                image & text container
@@ -307,17 +272,10 @@ button:hover {
     padding-bottom: 2em;
 }
 
-.card-text .card {
-    order: 1;
-}
-
-.card-text .text-aside {
-    order: 2;
-}
-
-.text-aside {
-    padding: 0 1em;
-}
+/* Put text aside */
+.card-text .card { order: 1 }
+.card-text .text-aside { order: 2 }
+.text-aside { padding: 0 1em }
 
 .text-aside ul {
     padding-left: 1em;
@@ -343,16 +301,10 @@ button:hover {
     background-size: cover;
  }
 
-
-
 /* -----------------------------------------------
-                    Certificate
+                Certificate section
 ----------------------------------------------- */
-.certificate-wrapper {
-    padding: 1em;
-}
-
-
+.certificate-wrapper { padding: 1em }
 
 .certificate-wrapper div {
     display: flex;
@@ -367,38 +319,20 @@ button:hover {
     margin: 1em;
 }
 
-.certificate-wrapper a:last-child {
-    max-width: 66%;
-}
-
-.certificate-wrapper img {
-    width: 100%;
-}
-
+.certificate-wrapper a:last-child { max-width: 66% }
+.certificate-wrapper img { width: 100% }
 
 /* -----------------------------------------------
-                    Kuld-section
+                    Kuld site
 ----------------------------------------------- */
-.kuld-title {
-    display: none;
-}
-
-.kuld-section {
-    padding: 1em;
-}
-
-.kuld-section img {
-    width: 100%;
-}
-
-
+.kuld-title { display: none }
+.kuld-section { padding: 1em }
+.kuld-section img { width: 100% }
 
 /* -----------------------------------------------
                     Infographic
 ----------------------------------------------- */
-.infographic-section {
-    padding: 1em;
-}
+.infographic-section { padding: 1em }
 
 .infographic-section img {
     display: block;
@@ -406,10 +340,15 @@ button:hover {
     width: 100%;
 }
 
-
 /* -----------------------------------------------
-                    Dog icons
+                    Health icons
 ----------------------------------------------- */
+.micro-text {
+    text-align: center;
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
 .icon-wrapper {
     display: flex;
     width: 100%;
@@ -421,6 +360,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .icon img {
@@ -436,10 +376,8 @@ button:hover {
     width: 30%;
 }
 
-
-
-
-
+.icon a { color: black }
+.icon a:hover { color: white }
 
 /* -----------------------------------------------
                     Image slider
@@ -459,7 +397,6 @@ button:hover {
     overflow: hidden;
 }
 
-
 .img-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -469,14 +406,11 @@ button:hover {
     display: block;
     width: calc(98% / 3);
     margin-right: 1%;
+    object-fit: cover;
+    max-height: 550px;
 }
 
-.img-container img:last-child {
-    margin-right: 0;
-}
-
-
-
+.img-container img:last-child { margin-right: 0 }
 
 /* Buttons */
 .img-slider button {
@@ -510,26 +444,37 @@ button:hover {
     top: calc(50% - 15px);
 }
 
+/* -----------------------------------------------
+                Barometer section
+----------------------------------------------- */
+.barometer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
+.barometer img { width: 80% }
 
+/* -----------------------------------------------
+                    Kuld subsite
+----------------------------------------------- */
+.parent-cards {
+    display: flex;
+    flex-direction: column;
+}
 
-
-
-
-
-
-
+.hvalpe-cards {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
 
 /* -----------------------------------------------
                       Footer
 ----------------------------------------------- */
-footer {
-    margin-top: 3em;
-}
-
-.footer-wrapper {
-    background-color: #6e7f62;
-}
+footer { margin-top: 3em }
+.footer-wrapper { background-color: #6e7f62 }
 
 /* Footer curve */
 .curve {
@@ -550,9 +495,7 @@ footer {
 }
 
 /* Link color */
-.footer-content a {
-    color: #cec6c0;
-}
+.footer-content a { color: #cec6c0 }
 
 /* Footer content elements */
 .footer-content div {
@@ -573,13 +516,8 @@ footer {
 }
 
 /* Footer element order */
-.address {
-    order: 1;
-}
-
-.contact {
-    order: 2;
-}
+.address { order: 1 }
+.contact { order: 2 }
 
 /* Centered SoMe links */
 .some {
@@ -589,30 +527,19 @@ footer {
     font-size: 45px;
 }
 
-.some a {
-    margin: 0 0.5em;
-}
+.some a { margin: 0 0.5em }
 
 /* Icon size */
-.some img {
-    width: 48px;
-}
-
+.some img { width: 48px }
 
 
 /* -----------------------------------------------
-                    Tablet (768px)
+                Tablet + PC (768px)
 ----------------------------------------------- */
 @media screen and (min-width: 768px) {
     /* Wave elements */
-    .wavy {
-        position: relative;
-        /*margin: 86px 0;*/
-    }
-
-    .no-wave {
-        padding: 7em 0;
-    }
+    .wavy { position: relative }
+    .no-wave { padding: 7em 0 }
 
     /* Wavy top background (::before) */
     .wavy.bg-darkgreen::before { background-image: url(../img/darkgreen_top.png) }
@@ -650,32 +577,40 @@ footer {
     .wavy::before { top: -86px }
     .wavy::after { bottom: -86px }
 
-
-
+    /* Header is larger, push content more */
+    main { margin-top: 5em }
 
     /* Theme */
-    h2 {
-        font-size: 2.2em;
+    .hero h1 {
+        font-size: 4em;
+        font-family: 'Gloria Hallelujah';
     }
+
+    h2 { font-size: 2.2em }
 
     h3 {
         font-size: 1.75em;
         text-align: left;
     }
 
-    p {
-        line-height: 1.5em;
-    }
+    p { line-height: 1.5em }
 
+    /* Navigation */
+    header { height: auto }
+    .navigation { align-items: center }
 
     /* Remove burger navigation*/
     .navigation {
         max-width: 1220px;
         margin: 0 auto;
+        height: 5em;
     }
 
     .logo {
         margin: 0.5em 1em;
+        align-self: flex-start;
+        width: 8em;
+        transition: width 0.2s ease-in-out;
     }
 
     .nav-bar {
@@ -687,27 +622,16 @@ footer {
         text-transform: uppercase;
     }
 
-    .nav-button {
-        display: none;
-    }
+    .nav-button { display: none }
 
     /* Add hover effect on nav-links */
-    .nav-bar li a:hover {
-        color: #e0dcd9;
-    }
-
-
-
+    .nav-bar li a:hover { color: #e0dcd9 }
 
     /* Set height for banner */
-    .hero {
-        height: 550px;
-    }
+    .hero { height: 500px }
 
     /* Add padding to sections */
-    section {
-        padding: 1em 0;
-    }
+    section { padding: 1em 0 }    
 
     /* Center content at max-width */
     section > .section-content {
@@ -717,9 +641,7 @@ footer {
     }
 
     /* Display polaroids on frontpage in a row */
-    .card-wrapper {
-        flex-direction: row;
-    }
+    .card-wrapper { flex-direction: row }
 
     /* Limit card size and add rotation */
     .card {
@@ -728,13 +650,8 @@ footer {
         transform: rotate(1.5deg);
     }
 
-    .card:nth-child(2) {
-        transform: rotate(-1.5deg);
-    }
-
-    .card:nth-child(3) {
-        transform: rotate(2deg);
-    }
+    .card:nth-child(2) { transform: rotate(-1.5deg) }
+    .card:nth-child(3) { transform: rotate(2deg) }
 
     .card-wrapper > .card:hover {
         cursor: pointer;
@@ -742,11 +659,8 @@ footer {
         transform: rotate(0deg);
     }
 
-
     /* Intro text positioning */
-    .welcome-text {
-        flex-direction: row;
-    }
+    .welcome-text { flex-direction: row }
 
     .welcome-text h2 {
         width: 50%;
@@ -755,16 +669,24 @@ footer {
         font-size: 2.2em;
     }
 
-    .welcome-text div {
-        width: 50%;
+    .welcome-text div { width: 50% }
+    .welcome-text p { padding: 1em }
+
+    /* Barometer size */
+    .barometer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
-    .welcome-text p {
-        padding: 1em;
+    .barometer h3 { text-align: center }
+
+    .barometer div {
+        width: 35%;
+        margin: 1em;
     }
 
-
-
+    .barometer img { width: 75% }
 
     /* Card-text aside */
     .card-text {
@@ -774,17 +696,11 @@ footer {
         padding-bottom: 0;
     }
 
-    .card-text .card:nth-child(2) {
-        order: 3;
-    }
+    .card-text .card:nth-child(2) { order: 3 }
 
-    .right-text {
-        padding-left: 4em;
-    }
-
-    .left-text {
-        padding-right: 4em;
-    }
+    /* Padding left and right side of text */
+    .right-text { padding-left: 4em }
+    .left-text { padding-right: 4em }
 
     /* Certifcate in row */
     .certificate-wrapper {
@@ -797,37 +713,44 @@ footer {
         justify-content: space-around;
     }
 
-    .certificate-wrapper p {
-        text-align: center;
-    }
-
-
-    .certificate-wrapper a {
-        width: 10%;
-    }
-
-    .certificate-wrapper a:first-child {
-        order: -2;
-    }
+    .certificate-wrapper p { text-align: center }
+    .certificate-wrapper a { width: 10% }
+    .certificate-wrapper a:first-child { order: -2 }
 
     .certificate-wrapper a:last-child {
         order: -1;
         width: 25%;
     }
 
-
-
     /* Kuld-section */
-    .kuld-section {
-        display: flex;
-    }
+    .kuld-section { display: flex }
 
     .kuld-section div {
         padding: 0 2em;
+        width: 70%;
     }
 
-    .kuld-section img {
+    .kuld-section .kuld-img-wrapper {
+        padding: 0;
         width: 30%;
+    }
+
+    /* Kuld site */
+    .parent-cards {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .hvalpe-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .hvalpe-cards .card {
+        max-width: 20%;
+        min-width: 20%;
+        transform: none;
     }
 
     /* Infographic */
@@ -848,28 +771,15 @@ footer {
         width: 45%;
     }
 
-
-
-
     /* Icon sizing */
-    .icon {
-        width: 25%;
-    }
-
+    .icon { width: 25% }
 
     /* Top and Bottom section no padding */
-    .top-elm {
-        padding-top: 0;
-    }
-
-    .bottom-elm {
-        padding-bottom: 0;
-    }
+    .top-elm { padding-top: 0 }
+    .bottom-elm { padding-bottom: 0 }
 
     /* Footer content positioning */
-    footer {
-        margin-top: 8em;
-    }
+    footer { margin-top: 8em }
 
     .footer-content {
         max-width: 1220px;
@@ -884,20 +794,15 @@ footer {
         text-align: center;
     }
 
-    .footer-content a:hover {
-        color: white;
-    }
+    .footer-content a:hover { color: white }
 
     .some {
         order: 3;
         align-items: center;
     }
 
-    .some img {
-        width: 36px;
-    }
+    .some img { width: 36px }
 
-    .some a:hover {
-        color: white;
-    }
+    /* Link hover color */
+    .some a:hover { color: white }
 }
