@@ -533,6 +533,21 @@ footer { margin-top: 3em }
 .some img { width: 48px }
 
 
+
+/* -----------------------------------------------
+                    Error page
+----------------------------------------------- */
+.errorpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 1em;
+}
+
+.errorpage h1 { font-size: 1.75em }
+.errorpage p { margin-top: 0.5em }
+.errorpage img { max-width: 80%; margin-top: 2em; }
+
 /* -----------------------------------------------
                 Tablet + PC (768px)
 ----------------------------------------------- */
@@ -805,4 +820,8 @@ footer { margin-top: 3em }
 
     /* Link hover color */
     .some a:hover { color: white }
+
+    /* Error page */
+    .errorpage h1 { font-size: 2.5em }
+    .errorpage img { max-width: 500px }
 }
