@@ -9,6 +9,8 @@
 /* -----------------------------------------------
                       Theme
 ----------------------------------------------- */
+html { scroll-behavior: smooth }
+
 body {
     font-family: 'Muli', sans-serif;
     font-weight: 300;
@@ -41,9 +43,7 @@ i {
     opacity: 0.8;
 }
 
-.grey {
-    background-color: #eeeeee;
-}
+.grey { background-color: #eeeeee }
 
 .written {
     font-family: 'Gloria Hallelujah';
@@ -70,6 +70,11 @@ button:hover {
 
 a, button { transition: color 0.25s ease, background-color 0.25s ease }
 .centered { text-align: center }
+
+/* Scroll margin for dog site */
+#nova { scroll-margin-top: 5em }
+#mazie { scroll-margin-top: -1em }
+#zelda { scroll-margin-top: 5em }
 
 /* Theme background colors */
 .bg-darkgreen { background-image: url(../img/darkgreen_bg.png) }
@@ -344,6 +349,10 @@ a.card {
     width: 100%;
 }
 
+.contact-btn  {color: #6e7f62 }
+.contact-btn:hover {color: white }
+
+
 /* -----------------------------------------------
                     Health icons
 ----------------------------------------------- */
@@ -566,7 +575,7 @@ footer { margin-top: 3em }
     .wavy.bg-lightgreen::before { background-image: url(../img/lightgreen_top.png) }
     .wavy.bg-darkbrown::before { background-image: url(../img/darkbrown_top.png) }
     .wavy.bg-brown::before { background-image: url(../img/brown_top.png) }
-    .wavy.bg-lightbrown::before { background-image: url(../img/darkbrown_top.png) }
+    .wavy.bg-lightbrown::before { background-image: url(../img/lightbrown_top.png) }
 
     /* Wavy bottom background (::after) */
     .wavy.bg-darkgreen::after { background-image: url(../img/darkgreen_bottom.png) }
@@ -574,7 +583,7 @@ footer { margin-top: 3em }
     .wavy.bg-lightgreen::after { background-image: url(../img/lightgreen_bottom.png) }
     .wavy.bg-darkbrown::after { background-image: url(../img/darkbrown_bottom.png) }
     .wavy.bg-brown::after { background-image: url(../img/brown_bottom.png) }
-    .wavy.bg-lightbrown::after { background-image: url(../img/darkbrown_bottom.png) }
+    .wavy.bg-lightbrown::after { background-image: url(../img/lightbrown_bottom.png) }
 
     /* if a box is wavy, add ::before and ::after elements */
     .wavy::before, .wavy::after {
@@ -699,14 +708,21 @@ footer { margin-top: 3em }
         justify-content: space-around;
     }
 
-    .barometer h3 { text-align: center }
+    .barometer h3 { text-align: center; justify-self: flex-start; }
 
     .barometer div {
         width: 35%;
         margin: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .barometer img { width: 75% }
+    .barometer img { 
+        width: 75%;
+        justify-self: flex-end;
+    }
 
     /* Card-text aside */
     .card-text {
