@@ -293,7 +293,7 @@ a.card {
 .text-aside li::before{
     content: '';
     position: absolute;
-    left: -1.5em;
+    left: -1.66em;
     top: 0.05em;
     height: 1em;
     width: 1em;
@@ -635,6 +635,7 @@ footer { margin-top: 3em }
         width: auto;
         height: auto;
         text-transform: uppercase;
+        font-size: 0.75em;
     }
 
     .nav-button { display: none }
@@ -714,8 +715,8 @@ footer { margin-top: 3em }
     .card-text .card:nth-child(2) { order: 3 }
 
     /* Padding left and right side of text */
-    .right-text { padding-left: 4em }
-    .left-text { padding-right: 4em }
+    .right-text { padding-left: 2em }
+    .left-text { padding-right: 2em }
 
     /* Certifcate in row */
     .certificate-wrapper {
@@ -824,4 +825,14 @@ footer { margin-top: 3em }
     /* Error page */
     .errorpage h1 { font-size: 2.5em }
     .errorpage img { max-width: 500px }
+}
+
+/* -----------------------------------------------
+                    PC (1024px)
+----------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    /* Larger font-size in nav-bar on PC */
+    .nav-bar {
+        font-size: 1em;
+    }
 }
